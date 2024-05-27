@@ -1,0 +1,170 @@
+/* link google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+/* VARIABLES  */
+:root {
+    --main-color: #6dacff;
+    --sec-color: #006eff;
+    --dark-color: #1f1f1f;
+    --light-color: #f3f3f3;
+}
+/* My Form */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, var(--main-color),var(--light-color));
+}
+.container {
+    width: 330px;
+    background-color: var(--light-color);
+    text-align: center;
+    border-radius: 15px;
+    margin: 10px 0;
+    padding: 50px 35px 10px 35px;
+    box-shadow: 1px 1px 5px var(--main-color);
+}
+.container h2 {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.container .my-form {
+    width: 100%;
+    overflow: hidden;
+}
+form {
+    display: flex;
+    width: 400%;
+}
+form .slide {
+    width: 25%;
+    transition: all .5s ease-in-out;
+}
+form .slide .title {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+}
+form .slide .field {
+    position: relative;
+    display: flex;
+    height: 45px;
+    width: 100%;
+    margin: 45px 0;
+}
+form .slide .field .label {
+    position: absolute;
+    top: -30px;
+    left: 10px;
+    font-weight: 500;
+}
+form .slide .field input {
+    width: 100%;
+    border: 1px solid var(--main-color);
+    border-radius: 15px;
+    font-size: 18px;
+    padding: 15px;
+}
+form .slide .field input:focus {
+    outline: none;
+    border: 2px solid var(--sec-color);
+}
+form .slide select {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+form .slide select {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+form .slide .field button {
+    width: 100%;
+    height: calc(100% + 5px);
+    margin-top: -20px;
+    border: none;
+    background-color: var(--main-color);
+    color: var(--light-color);
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+form .slide .field button:hover {
+    background-color: var(--sec-color);
+}
+form .slide .btn {
+    display: flex;
+    column-gap: 5px;
+}
+.progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 15px 0;
+}
+.container .progress-bar .step {
+    width: 100%;
+}
+.container .progress-bar .step .name {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.container .progress-bar .step .number {
+    position: relative;
+    display: flex;
+    height: 25px;
+    width: 25px;
+    border: 2px solid var(--dark-color);
+    margin: auto;
+    border-radius: 50%;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+}
+.container .progress-bar .step .number::before {
+    position: absolute;
+    content: "";
+    width: 36px;
+    height: 3px;
+    right: -40px;
+    background-color: var(--dark-color);
+}
+.container .progress-bar .step:last-child .number::before {
+    display: none;
+}
+.container .progress-bar .step i {
+    font-size: 20px;
+    opacity: 0;
+}
+/* Passed Step */
+.container .progress-bar .step.passed .name {
+    color: var(--sec-color);
+}
+.container .progress-bar .step.passed .number {
+    background-color: var(--sec-color);
+    border: 2px solid var(--main-color);
+    color: var(--light-color);
+}
+.container .progress-bar .step.passed i {
+    color: var(--main-color);
+    opacity: 1;
+}
+.container .progress-bar .step.passed .number::before {
+    background-color: var(--main-color);
+}
